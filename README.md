@@ -3,7 +3,7 @@
 ## Overview
 This repository contains reusable **SQL scripts for building common dimension tables** designed for use in **Power BI**
 
-Dimesnion tables are a core part of **star schema design**, enabling clean relationships, easier DAX, and consistent reporting across multiple fact tables.
+Dimension tables are a core part of **star schema design**, enabling clean relationships, easier DAX, and consistent reporting across multiple fact tables.
 
 This project demonstrates:
 - SQL skills in designing and generating dimension tables.
