@@ -1,7 +1,7 @@
 # SQL Dimension Tables for Power BI
 
 ## Overview
-This repository contains reusable **SQL scripts for building common dimesnion tables** designed for use in **Power BI**
+This repository contains reusable **SQL scripts for building common dimension tables** designed for use in **Power BI**
 
 Dimesnion tables are a core part of **star schema design**, enabling clean relationships, easier DAX, and consistent reporting across multiple fact tables.
 
