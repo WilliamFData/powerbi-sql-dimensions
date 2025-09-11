@@ -49,5 +49,5 @@ FROM FACT;
 
 
 ## Useful Links
-- https://docs.snowflake.com/en/sql-reference/functions/year<img width="488" height="17" alt="image" src="https://github.com/user-attachments/assets/c4297b86-d570-4757-8c2d-6aab4d641dc1" />
+- https://docs.snowflake.com/en/sql-reference/functions/year
 
