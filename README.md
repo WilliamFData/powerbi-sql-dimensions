@@ -10,13 +10,13 @@ This project demonstrates:
 - Data modeling best practices for Business Intelligence (BI)
 
 ## Repository Structure
-powerbi-sql-dimensions/
-├── README.md                  # Project overview and documentation
-├── pbix/                      # Power BI report files
-│   └── Portfolio PBI.pbix     # Main Power BI report
-├── sql/                       # SQL scripts for dimension tables
-│   ├── Dim_Date.sql           # Script to generate full date dimension
-│   └── Dim_Date_Period.sql    # Script for period-based date dimension
+powerbi-sql-dimension/
+├── README.md                     # Project overview and documentation
+├── pbix/                         # Power BI report files
+│   └── Portfolio.pbix            # Main Power BI report
+├── sql/                          # SQL scripts for dimension tables
+│   ├── Dim_Date.sql              # Script to generate full date dimension
+│   └── Dim_Date_Parquet.sql      # Script for period-based date dimension
 
 ---
 
