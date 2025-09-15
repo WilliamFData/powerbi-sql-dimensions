@@ -45,7 +45,7 @@ This project demonstrates:
 | MONTH_OFFSET*  | Monthly offset from today  |
 | YEAR_OFFSET*  | Yearly offset from today  |
 
-\* The Power BI file would have to update daily for these to be up to date.
+\* These columns rely on daily refreshes as they use today's date as a reference.
 
 
 ### Dim_Date_Period
