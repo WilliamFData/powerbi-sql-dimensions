@@ -59,6 +59,10 @@ This project demonstrates:
 | PERIOD_ORDER  | Order of periods used in Power BI  |
 
 ### Dim_Geography
+- TBC
+
+### Dim_Weather
+- TBC
 
 
 ---
