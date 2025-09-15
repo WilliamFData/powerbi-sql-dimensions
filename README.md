@@ -21,7 +21,6 @@ This project demonstrates:
 - Supports **financial year starting in July**
 - Can be marked as the **offical Date Table** in Power BI
 
-
 | Colume Name    | Description    |
 |----------------|----------------|
 | DATE_DIM_ID  | Intended for use with large fact tables to optimize storage. For standard joins, prefer using the DATE column.  |
@@ -50,7 +49,8 @@ This project demonstrates:
 
 
 ### Dim_Date_Period
-
+- Parent of Dim_Date
+- Used for defaults in Power BI
 
 ### Dim_Geography
 
