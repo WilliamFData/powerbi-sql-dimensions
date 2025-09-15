@@ -68,7 +68,8 @@ This project demonstrates:
 ---
 
 ## Example in Power BI
-*(placeholder - add a screenshot of your model-diagram.png)*
+<img width="965" height="745" alt="image" src="https://github.com/user-attachments/assets/7f72526d-402c-4f4f-b231-c13671507713" />
+
 
 - The Date Dimension is marked as the **Date Table**
 - Dimensions connect to the Fact table in a **star schema** layout
