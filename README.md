@@ -22,10 +22,29 @@ This project demonstrates:
 - Can be marked as the **offical Date Table** in Power BI
 
 
-| Column 1       | Column 2       | Column 3       |
-|----------------|----------------|----------------|
-| Row 1, Cell 1  | Row 1, Cell 2  | Row 1, Cell 3  |
-| Row 2, Cell 1  | Row 2, Cell 2  | Row 2, Cell 3  |
+| Colume Name       | Description       |
+|----------------|----------------|
+| DATE_DIM_ID  | Intended for use with large fact tables to optimize storage. For standard joins, prefer using the DATE column.  |
+| DATE  | Actual date (YYYY-MM-DD  |
+| DAY_OF_MONTH  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
+| DATE  | Row 2, Cell 2  |
 
 
 
