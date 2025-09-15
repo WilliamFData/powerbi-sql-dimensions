@@ -22,31 +22,29 @@ This project demonstrates:
 - Can be marked as the **offical Date Table** in Power BI
 
 
-| Colume Name       | Description       |
+| Colume Name    | Description    |
 |----------------|----------------|
 | DATE_DIM_ID  | Intended for use with large fact tables to optimize storage. For standard joins, prefer using the DATE column.  |
-| DATE  | Actual date (YYYY-MM-DD  |
-| DAY_OF_MONTH  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-| DATE  | Row 2, Cell 2  |
-
-
+| DATE  | Actual date (YYYY-MM-DD)  |
+| DAY_OF_MONTH  | Day number within the month  |
+| MONTH  | Month number (1-12)  |
+| MONTH_NAME_SHORT  | Abbreviated month name (e.g., Jan)  |
+| MONTH_NAME_FULL  | Full month name (e.g., January)  |
+| YEAR  | Calendar year  |
+| DAY_OF_WEEK_NUM  | Day of week number (e.g., 1 = Monday)  |
+| DAY_OF_WEEK_DESC  | Day name (e.g., Mon)  |
+| ISO_WEEK  | ISO 8601 week number  |
+| START_OF_WEEK  | Date of the Monday of the week  |
+| END_OF_WEEK  | Date of the Sunday of the week  |
+| QUARTER  | Calendar quarter (1–4)  |
+| FIN_YEAR  | Financial year (e.g., 2023 for July 2022–June 2023)  |
+| ISO_YEAR  | ISO 8601 year  |
+| MONTH_YEAR  | Concatenated month and year (e.g., Jan-2023)  |
+| FIN_YEAR_DESC  | Financial year label (e.g., FY23)  |
+| DAY_OFFSET  | Daily offset from today (eg., Yesterday = -1)  |
+| WEEK_OFFSET  | Weekly offset from today  |
+| MONTH_OFFSET  | Monthly offset from today  |
+| YEAR_OFFSET  | Yearly offset from today  |
 
 
 ### Dim_Date_Period
