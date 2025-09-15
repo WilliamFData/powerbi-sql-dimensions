@@ -107,4 +107,5 @@ GROUP BY ALL;
 
 ## Useful Links
 - https://docs.snowflake.com/en/sql-reference/functions/year
+- https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files
 
