@@ -20,7 +20,13 @@ This project demonstrates:
 - Covers 2000-2050 (easily extendable)
 - Supports **financial year starting in July**
 - Can be marked as the **offical Date Table** in Power BI
-- Columns: DATE_DIM_ID, DATE, DAY_OF_MONTH, MONTH, MONTH_NAME_SHORT, MONTH_NAME_FULL, YEAR, DAY_OF_WEEK_NUM, DAY_OF_WEEK_DESC, ISO_WEEK, START_OF_WEEK, END_OF_WEEK, QUARTER, FIN_YEAR, ISO_YEAR, MONTH_YEAR, FIN_YEAR_DESC, DAY_OFFSET, WEEK_OFFSET, MONTH_OFFSET, YEAR_OFFSET
+| Column 1       | Column 2       | Column 3       |
+|----------------|----------------|----------------|
+| Row 1, Cell 1  | Row 1, Cell 2  | Row 1, Cell 3  |
+| Row 2, Cell 1  | Row 2, Cell 2  | Row 2, Cell 3  |
+
+
+
 
 ### Dim_Date_Period
 
