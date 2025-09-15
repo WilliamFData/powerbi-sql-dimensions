@@ -110,4 +110,5 @@ GROUP BY ALL;
 - https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files
 - https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf
 - https://www.abs.gov.au/census/find-census-data/datapacks?release=2021&product=GCP&geography=SAL&header=S
+- https://github.com/HishamParol/Snowpark-bulk-loader/blob/main/snowpark_bulk_load.ipynb
 
