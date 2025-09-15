@@ -74,6 +74,7 @@ This project demonstrates:
 - The Date Dimension is marked as the **Date Table**
 - Dimensions connect to the Fact table in a **star schema** layout
 - Simplifies time intelligence (MTD, YTD, FYTD, etc.) and improved report performance.
+- The relationship between the Dim_Date and Dim_Date_Period runs both ways to allow for filtering
 
 ---
 
