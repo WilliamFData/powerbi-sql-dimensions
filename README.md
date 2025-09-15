@@ -41,11 +41,11 @@ This project demonstrates:
 | ISO_YEAR  | ISO 8601 year  |
 | MONTH_YEAR  | Concatenated month and year (e.g., Jan-2023)  |
 | FIN_YEAR_DESC  | Financial year label (e.g., FY23)  |
-| DAY_OFFSET  | Daily offset from today (eg., Yesterday = -1)  |
-| WEEK_OFFSET  | Weekly offset from today  |
-| MONTH_OFFSET  | Monthly offset from today  |
-| YEAR_OFFSET  | Yearly offset from today  |
-
+| DAY_OFFSET*  | Daily offset from today (eg., Yesterday = -1)  |
+| WEEK_OFFSET*  | Weekly offset from today  |
+| MONTH_OFFSET*  | Monthly offset from today  |
+| YEAR_OFFSET*  | Yearly offset from today  |
+* The Power BI file would have to update daily for these to be up to date.
 
 ### Dim_Date_Period
 
