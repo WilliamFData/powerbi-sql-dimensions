@@ -52,6 +52,12 @@ This project demonstrates:
 - Parent of Dim_Date
 - Used for defaults in Power BI
 
+| Colume Name    | Description    |
+|----------------|----------------|
+| DATE_DIM_ID  | Used to join to Dim_Date  |
+| DATE_PERIOD  | Date period description  |
+| PERIOD_ORDER  | Order of periods used in Power BI  |
+
 ### Dim_Geography
 
 
