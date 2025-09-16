@@ -1,0 +1,51 @@
+table 'Measure Table'
+	lineageTag: 50f6fade-54fe-4389-99da-213de05fe460
+
+	measure 'Last Refresh Date' = NOW()
+		formatString: Short Date
+		lineageTag: 07054a63-7793-4422-94cd-d07d89bf958e
+
+	measure Sales = ```
+			
+			    SUM(Fact_Sales_TEST[SALES_AMOUNT])
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 948eabfc-3351-46a8-837a-51f9f36fde09
+
+	measure Transactions = ```
+			
+			    DISTINCTCOUNTNOBLANK(Fact_Sales_TEST[TRANSACTION_ID])
+			```
+		formatString: #,0
+		lineageTag: cf64b411-eca1-4c79-b211-57390ef5a1b1
+
+	measure 'Sales LY' = ```
+			
+			    CALCULATE([Sales]
+			        , SAMEPERIODLASTYEAR(Dim_Date[DATE])
+			        , ALL(Dim_Date_Period)
+			    )
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: -Time Intelligence
+		lineageTag: b664d763-5b9b-41f6-b096-d1332f6d3277
+
+	measure TEST = ```
+			
+			    0
+			```
+		formatString: 0
+		lineageTag: 2cc0a4a7-3b70-48cc-a86b-e6b8008cb56e
+
+	partition 'Measure Table' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

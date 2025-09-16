@@ -1,0 +1,54 @@
+table Fact_Sales_TEST
+	lineageTag: ff3fc692-a80e-4cae-a7a0-aa20cdd67494
+
+	column DATE_DIM_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 628c185e-7aba-4300-a493-f9d48df25f99
+		summarizeBy: none
+		sourceColumn: DATE_DIM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TRANSACTION_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a79c0c7-288f-46ff-b8d2-958027973161
+		summarizeBy: count
+		sourceColumn: TRANSACTION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 255a792b-ea97-4897-9e6a-e7c46d30f992
+		summarizeBy: none
+		sourceColumn: PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_AMOUNT
+		dataType: int64
+		formatString: 0
+		lineageTag: 599bf290-fd99-4a7e-88f3-cbe8f784202a
+		summarizeBy: sum
+		sourceColumn: SALES_AMOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Sales_TEST = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Data_Files\Fact_Fake_Sales.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DATE_DIM_ID", Int64.Type}, {"TRANSACTION_ID", Int64.Type}, {"PRODUCT_ID", Int64.Type}, {"SALES_AMOUNT", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
