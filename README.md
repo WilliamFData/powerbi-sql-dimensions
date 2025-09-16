@@ -13,9 +13,9 @@ This project demonstrates:
 ```text
 powerbi-sql-dimension/
 ├── README.md                     # Project overview and documentation
-├── pbix/                         # Power BI report files
+├── Power BI/                         # Power BI report files
 │   └── Portfolio PBI.pbix            # Main Power BI report
-├── sql/                          # SQL scripts for dimension tables
+├── SQL/                          # SQL scripts for dimension tables
 │   ├── Dim_Date.sql              # Script to generate date dimension
 │   └── Dim_Date_Period.sql      # Script for period-based date dimension
 ```
