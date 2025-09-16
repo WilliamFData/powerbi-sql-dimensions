@@ -32,9 +32,8 @@ table 'Measure Table'
 
 	measure TEST = ```
 			
-			    0
+			    "This is a TEST Measure"
 			```
-		formatString: 0
 		lineageTag: 2cc0a4a7-3b70-48cc-a86b-e6b8008cb56e
 
 	partition 'Measure Table' = m
