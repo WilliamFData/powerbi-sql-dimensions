@@ -1,0 +1,22 @@
+model Model
+	culture: en-AU
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AU
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Dim_Date","Dim_Date_Period","Measure Table","Fact_Sales_TEST","Dim_Product_TEST"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dim_Date
+ref table Dim_Date_Period
+ref table 'Measure Table'
+ref table Fact_Sales_TEST
+ref table Dim_Product_TEST
+
+ref cultureInfo en-AU
+

@@ -1,0 +1,13 @@
+relationship AutoDetected_48ae7201-6e8a-4f40-90f9-1e3b44d6ed99
+	crossFilteringBehavior: bothDirections
+	fromColumn: Dim_Date_Period.DATE_DIM_ID
+	toColumn: Dim_Date.DATE_DIM_ID
+
+relationship AutoDetected_91c5a605-f9cf-45da-b863-586683935376
+	fromColumn: Fact_Sales_TEST.DATE_DIM_ID
+	toColumn: Dim_Date.DATE_DIM_ID
+
+relationship AutoDetected_a0fb0737-8066-47a0-986d-4dd496b2afc3
+	fromColumn: Fact_Sales_TEST.PRODUCT_ID
+	toColumn: Dim_Product_TEST.PRODUCT_ID
+

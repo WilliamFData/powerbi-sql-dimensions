@@ -1,0 +1,216 @@
+table Dim_Date
+	lineageTag: afb320dc-8e10-4e08-98be-3599ccdd3e8a
+	dataCategory: Time
+
+	column DATE_DIM_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cd088e6-4611-44f2-86ff-2542b01bc7e1
+		summarizeBy: none
+		sourceColumn: DATE_DIM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: a5ddf8f7-d0b8-41a6-895e-c3a18e956f24
+		summarizeBy: none
+		sourceColumn: DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DAY_OF_MONTH
+		dataType: int64
+		formatString: 0
+		lineageTag: f83fb182-aadc-4bc2-8fb8-7509f57ae1ca
+		summarizeBy: sum
+		sourceColumn: DAY_OF_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH
+		dataType: int64
+		formatString: 0
+		lineageTag: d84617ad-b956-4000-a290-d2e2f1b61ddd
+		summarizeBy: sum
+		sourceColumn: MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH_NAME_SHORT
+		dataType: string
+		lineageTag: 58de567e-da5f-41c1-afb4-740277447d0d
+		summarizeBy: none
+		sourceColumn: MONTH_NAME_SHORT
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH_NAME_FULL
+		dataType: string
+		lineageTag: d4b260d4-a4fa-4358-9133-d0c64091ecca
+		summarizeBy: none
+		sourceColumn: MONTH_NAME_FULL
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ea1aad1-2946-43f8-8527-85a38e070953
+		summarizeBy: sum
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_OF_WEEK_NUM
+		dataType: int64
+		formatString: 0
+		lineageTag: 74c9525a-376f-43ba-8d95-b0cdc33c0c89
+		summarizeBy: sum
+		sourceColumn: DAY_OF_WEEK_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_OF_WEEK_DESC
+		dataType: string
+		lineageTag: 7c126529-bead-4ac8-b4a2-6e6ff41b08df
+		summarizeBy: none
+		sourceColumn: DAY_OF_WEEK_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISO_WEEK
+		dataType: int64
+		formatString: 0
+		lineageTag: bf094418-9cdc-4a1e-94f4-457806ff7432
+		summarizeBy: sum
+		sourceColumn: ISO_WEEK
+
+		annotation SummarizationSetBy = Automatic
+
+	column START_OF_WEEK
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 46800dd8-9738-46eb-9e30-5cf9f2370a5a
+		summarizeBy: none
+		sourceColumn: START_OF_WEEK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column END_OF_WEEK
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f0c80222-0894-464e-9414-08d776ad1f98
+		summarizeBy: none
+		sourceColumn: END_OF_WEEK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column QUARTER
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c954331-44dd-40e2-ae8a-f937d575206e
+		summarizeBy: sum
+		sourceColumn: QUARTER
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIN_YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: e8a5be54-dff7-400e-9a01-bfca530fcebb
+		summarizeBy: sum
+		sourceColumn: FIN_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISO_YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 236e2c03-cad5-48d1-a0ca-71f9466915a0
+		summarizeBy: sum
+		sourceColumn: ISO_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH_YEAR
+		dataType: string
+		lineageTag: 0e98e859-f015-438a-9c6b-3e88b0ad6095
+		summarizeBy: none
+		sourceColumn: MONTH_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIN_YEAR_DESC
+		dataType: string
+		lineageTag: e86745b7-38ed-41b6-9ca2-3f22a76c687f
+		summarizeBy: none
+		sourceColumn: FIN_YEAR_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_OFFSET
+		dataType: int64
+		formatString: 0
+		lineageTag: 13d3c910-7a2e-4c2a-b699-3058bbbcc508
+		summarizeBy: sum
+		sourceColumn: DAY_OFFSET
+
+		annotation SummarizationSetBy = Automatic
+
+	column WEEK_OFFSET
+		dataType: int64
+		formatString: 0
+		lineageTag: d8fa7e51-2676-48bd-bc7d-f5dfc9ac4eb5
+		summarizeBy: sum
+		sourceColumn: WEEK_OFFSET
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH_OFFSET
+		dataType: int64
+		formatString: 0
+		lineageTag: 475729b0-d867-49fb-bde7-8bc3cb7fbefa
+		summarizeBy: sum
+		sourceColumn: MONTH_OFFSET
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_OFFSET
+		dataType: int64
+		formatString: 0
+		lineageTag: a267f224-8ff7-4efc-ae88-c457694e5695
+		summarizeBy: sum
+		sourceColumn: YEAR_OFFSET
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Date = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Data_Files\Dim_Date.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DATE_DIM_ID", Int64.Type}, {"DATE", type date}, {"DAY_OF_MONTH", Int64.Type}, {"MONTH", Int64.Type}, {"MONTH_NAME_SHORT", type text}, {"MONTH_NAME_FULL", type text}, {"YEAR", Int64.Type}, {"DAY_OF_WEEK_NUM", Int64.Type}, {"DAY_OF_WEEK_DESC", type text}, {"ISO_WEEK", Int64.Type}, {"START_OF_WEEK", type date}, {"END_OF_WEEK", type date}, {"QUARTER", Int64.Type}, {"FIN_YEAR", Int64.Type}, {"ISO_YEAR", Int64.Type}, {"MONTH_YEAR_STAGE", type date}, {"FIN_YEAR_DESC", type text}, {"DAY_OFFSET", Int64.Type}, {"WEEK_OFFSET", Int64.Type}, {"MONTH_OFFSET", Int64.Type}, {"YEAR_OFFSET", Int64.Type}}),
+				    #"Added Custom Column" = Table.AddColumn(#"Changed Type", "MONTH_YEAR", each Text.Combine({Date.ToText([MONTH_YEAR_STAGE], "MMM"), "-", Date.ToText([MONTH_YEAR_STAGE], "yy")}), type text),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Added Custom Column",{"DATE_DIM_ID", "DATE", "DAY_OF_MONTH", "MONTH", "MONTH_NAME_SHORT", "MONTH_NAME_FULL", "YEAR", "DAY_OF_WEEK_NUM", "DAY_OF_WEEK_DESC", "ISO_WEEK", "START_OF_WEEK", "END_OF_WEEK", "QUARTER", "FIN_YEAR", "ISO_YEAR", "MONTH_YEAR_STAGE", "MONTH_YEAR", "FIN_YEAR_DESC", "DAY_OFFSET", "WEEK_OFFSET", "MONTH_OFFSET", "YEAR_OFFSET"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns",{"MONTH_YEAR_STAGE"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

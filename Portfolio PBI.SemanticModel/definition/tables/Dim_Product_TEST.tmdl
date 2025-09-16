@@ -1,0 +1,31 @@
+table Dim_Product_TEST
+	lineageTag: 53dc7949-0e3d-43d5-864e-8b942b5ca9fe
+
+	column PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: ff778c52-d133-44f4-b882-4640a16e0fd0
+		summarizeBy: none
+		sourceColumn: PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_NAME
+		dataType: string
+		lineageTag: a1c6f679-6dae-48ef-8984-a69ba2d337e6
+		summarizeBy: none
+		sourceColumn: PRODUCT_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Product_TEST = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUQrPTElPLVFwVIrViVYyQgg4gQWMEQLOYAEToIB7IlggAixgihCIBAuYIQSilGJjAQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [PRODUCT_ID = _t, PRODUCT_NAME = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"PRODUCT_ID", Int64.Type}, {"PRODUCT_NAME", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
