@@ -75,7 +75,7 @@ GROUP BY ALL;
 
 ## Wiki Pages
 DAX Library: https://github.com/WilliamFData/powerbi-sql-dimensions/wiki/DAX-Library
-Data Dictionary: 
+Data Dictionary: https://github.com/WilliamFData/powerbi-sql-dimensions/wiki/Data-Dictionary
 
 ## Useful Links
 - https://docs.snowflake.com/en/sql-reference/functions/year
