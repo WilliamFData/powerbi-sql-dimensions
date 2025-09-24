@@ -9,8 +9,6 @@ WITH DATE_RANGE AS
 )
 SELECT * FROM DATE_RANGE
 
---SELECT * FROM DATES
-
 -- ===================================================================
 -- Step 2. Create logic for date dimension
 -- ===================================================================
@@ -46,6 +44,4 @@ SELECT
 FROM DATES
 WHERE 1=1
 	AND DATE_ID <= DATEADD(DAY,-1,GETDATE()::DATE)--For if you only want historical dates
-ORDER BY 1 DESC 
-
---SELECT * FROM DIM_DATE
+ORDER BY 1 DESC
