@@ -1,13 +1,18 @@
 name: SQL Auto-Fix
 
+# Trigger on manual dispatch, push, or pull request involving .sql files
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
   push:
     paths:
       - '**/*.sql'
   pull_request:
     paths:
       - '**/*.sql'
+
+# Set required permissions for the workflow
+permissions:
+  contents: write  # Needed if you plan to commit changes back to the repo
 
 jobs:
   fix-sql:
@@ -17,6 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run SQLFluff Fix via Docker (Snowflake Dialect)
-        run: |
-          docker run --rm -v ${{ github.workspace }}:/code sqlfluff/sqlfluff fix /code --dialect snowflake
+      - name: Run SQLFluff Fix (Snowflake Dialect)
+        uses: sqlfluff/sqlfluff-action@v1
+        with:
+          args: fix . --dialect snowflake
