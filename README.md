@@ -83,4 +83,5 @@ GROUP BY ALL;
 - https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf
 - https://www.abs.gov.au/census/find-census-data/datapacks?release=2021&product=GCP&geography=SAL&header=S
 - https://github.com/HishamParol/Snowpark-bulk-loader/blob/main/snowpark_bulk_load.ipynb
+- https://online.sqlfluff.com/
 
