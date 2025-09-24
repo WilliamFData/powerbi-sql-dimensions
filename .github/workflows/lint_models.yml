@@ -1,6 +1,14 @@
 name: Lint Models
 
-on: [pull_request]
+on: 
+  workflow_dispatch:
+  push:
+    paths:
+      - '**/*.sql'
+  pull_request:
+    paths:
+      - '**/*.sql'
+
 
 jobs:
   lint-models:
