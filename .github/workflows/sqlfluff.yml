@@ -3,13 +3,9 @@ name: SQL Lint Check
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
     paths:
       - '**/*.sql'
   pull_request:
-    branches:
-      - main
     paths:
       - '**/*.sql'
 
@@ -24,12 +20,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run SQLFluff Lint via Docker (Snowflake Dialect)
-        run: |
-          for file in $(find ${{ github.workspace }} -name "*.sql"); do
-            echo "Linting $file"
-            docker run --rm \
-              -v "${{ github.workspace }}:/code" \
-              sqlfluff/sqlfluff:latest \
-              lint "/code/${file#$GITHUB_WORKSPACE/}" --dialect snowflake
-          done
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install SQLFluff
+        run: pip install sqlfluff
+
+      - name: Lint all SQL files
+        run: sqlfluff lint . --dialect snowflake
