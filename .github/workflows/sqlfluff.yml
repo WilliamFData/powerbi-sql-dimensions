@@ -1,7 +1,7 @@
 name: SQL Linting
 
 on:
-  workflow_dispatch:  # 👈 Manual trigger
+  workflow_dispatch:  # Manual trigger
   push:
     paths:
       - '**/*.sql'
@@ -17,6 +17,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run SQLFluff via Docker (Snowflake Dialect)
+      - name: Run SQLFluff via Docker (uses .sqlfluff config)
         run: |
-          docker run --rm -v ${{ github.workspace }}:/code sqlfluff/sqlfluff lint /code --dialect snowflake
+          docker run --rm -v ${{ github.workspace }}:/code sqlfluff/sqlfluff lint /code
