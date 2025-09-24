@@ -10,7 +10,7 @@ on:
       - '**/*.sql'
 
 permissions:
-  contents: write  # Required if you want to commit changes later
+  contents: write  # Required if you want to commit new files later
 
 jobs:
   fix-sql:
@@ -20,10 +20,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run SQLFluff Fix via Docker (Snowflake Dialect)
-      run: |
-        docker run --rm \
-          -v "${{ github.workspace }}:/code" \
-          -u "$(id -u):$(id -g)" \
-          sqlfluff/sqlfluff:latest \
-          fix /code --dialect snowflake
+      - name: Ensure write permissions
+        run: chmod -R 777 ${{ github.workspace }}
+
+      - name: Run SQLFluff Fix and Save to New File
+        run: |
+          for file in $(find ${{ github.workspace }} -name "*.sql"); do
+            filename=$(basename "$file")
+            dirname=$(dirname "$file")
+            newfile="${dirname}/${filename%.sql}.fixed.sql"
+
+            docker run --rm \
+              -v "${{ github.workspace }}:/code" \
+              sqlfluff/sqlfluff:latest \
+              fix "/code/${file#$GITHUB_WORKSPACE/}" --dialect snowflake --force \
+              | tee "$newfile"
+          done
