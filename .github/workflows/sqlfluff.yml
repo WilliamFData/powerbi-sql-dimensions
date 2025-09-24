@@ -1,4 +1,4 @@
-name: SQL Linting
+name: SQL Auto-Fix
 
 on:
   workflow_dispatch:  # Manual trigger
@@ -10,13 +10,13 @@ on:
       - '**/*.sql'
 
 jobs:
-  lint-sql:
+  fix-sql:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run SQLFluff via Docker (uses .sqlfluff config)
+      - name: Run SQLFluff Fix via Docker (Snowflake Dialect)
         run: |
-          docker run --rm -v ${{ github.workspace }}:/code sqlfluff/sqlfluff lint /code
+          docker run --rm -v ${{ github.workspace }}:/code sqlfluff/sqlfluff fix /code --dialect snowflake
