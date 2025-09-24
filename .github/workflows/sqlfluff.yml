@@ -3,14 +3,18 @@ name: SQL Lint Check
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - '**/*.sql'
   pull_request:
+    branches:
+      - main
     paths:
       - '**/*.sql'
 
 permissions:
-  contents: read  # Only reading files, no write needed
+  contents: read
 
 jobs:
   lint-sql:
