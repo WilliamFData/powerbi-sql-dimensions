@@ -1,4 +1,4 @@
-name: SQL Auto-Fix
+name: SQL Lint Check
 
 on:
   workflow_dispatch:
@@ -10,37 +10,22 @@ on:
       - '**/*.sql'
 
 permissions:
-  contents: write  # Required to push changes back to the repo
+  contents: read  # Only reading files, no write needed
 
 jobs:
-  fix-sql:
+  lint-sql:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Ensure write permissions
-        run: chmod -R 777 ${{ github.workspace }}
-
-      - name: Run SQLFluff Fix and Save to New File
+      - name: Run SQLFluff Lint via Docker (Snowflake Dialect)
         run: |
           for file in $(find ${{ github.workspace }} -name "*.sql"); do
-            filename=$(basename "$file")
-            dirname=$(dirname "$file")
-            newfile="${dirname}/${filename%.sql}.fixed.sql"
-
+            echo "Linting $file"
             docker run --rm \
               -v "${{ github.workspace }}:/code" \
               sqlfluff/sqlfluff:latest \
-              fix "/code/${file#$GITHUB_WORKSPACE/}" --dialect snowflake --force \
-              | tee "$newfile"
+              lint "/code/${file#$GITHUB_WORKSPACE/}" --dialect snowflake
           done
-
-      - name: Commit and Push Fixed Files
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add .
-          git commit -m "Auto-generated SQL fixes via SQLFluff" || echo "No changes to commit"
-          git push
