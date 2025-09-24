@@ -10,7 +10,7 @@ on:
       - '**/*.sql'
 
 permissions:
-  contents: write  # Required if you want to commit new files later
+  contents: write  # Required to push changes back to the repo
 
 jobs:
   fix-sql:
@@ -36,3 +36,11 @@ jobs:
               fix "/code/${file#$GITHUB_WORKSPACE/}" --dialect snowflake --force \
               | tee "$newfile"
           done
+
+      - name: Commit and Push Fixed Files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto-generated SQL fixes via SQLFluff" || echo "No changes to commit"
+          git push
