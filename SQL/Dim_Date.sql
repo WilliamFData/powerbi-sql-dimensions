@@ -7,7 +7,7 @@ WITH DATE_RANGE AS
     SELECT DATEADD(DAY, SEQ4(), DATE '2000-01-01') AS DATE_ID
     FROM TABLE(GENERATOR(ROWCOUNT => 18628)) -- 1 year of dates is 365
 )
-SELECT * FROM DATE_RANGE
+SELECT * FROM DATE_RANGE;
 
 -- ===================================================================
 -- Step 2. Create logic for date dimension
@@ -44,4 +44,4 @@ SELECT
 FROM DATES
 WHERE 1=1
 	AND DATE_ID <= DATEADD(DAY,-1,GETDATE()::DATE)--For if you only want historical dates
-ORDER BY 1 DESC
+ORDER BY 1 DESC;
