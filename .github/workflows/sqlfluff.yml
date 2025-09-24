@@ -1,4 +1,4 @@
-name: CIname: SQL Linting
+name: SQL Linting
 
 on:
   workflow_dispatch:  # 👈 Manual trigger
