@@ -1,0 +1,22 @@
+name: SQL Linting
+
+on:
+  workflow_dispatch:  # 👈 Manual trigger
+  push:
+    paths:
+      - '**/*.sql'
+  pull_request:
+    paths:
+      - '**/*.sql'
+
+jobs:
+  lint-sql:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run SQLFluff via Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/code sqlfluff/sqlfluff lint /code
