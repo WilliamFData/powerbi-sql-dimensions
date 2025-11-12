@@ -24,6 +24,20 @@ powerbi-sql-dimension/
 ---
 
 ## Wiki Pages
-- Data Dictionary: https://github.com/WilliamFData/powerbi-sql-dimensions/wiki/Data-Dictionary
-- DAX Library: https://github.com/WilliamFData/powerbi-sql-dimensions/wiki/DAX-Library
+# 📚 Navigation
+- [Home](Home)
+   - [Table of Contents](Home#Table-of-Contents)
+   - [Dimensions](Home#Dimensions)
+   - [Useful Links](Home#Useful-Links)
 
+## 🔍 Core Sections
+- [Data Dictionary](Data-Dictionary)
+   - [Dim_Date](Data-Dictionary#dim_date)
+   - [Dim_Date_Period](Data-Dictionary#dim_date_period)
+- [DAX Library](DAX-Library)
+- Example Model Usage
+
+## 📈 Power Bi Showcases
+- Cascading Date Filters
+- SDLY vs SPLY
+- [Using Figma for Power BI templates](Using-Figma-for-Power-BI-templates)
