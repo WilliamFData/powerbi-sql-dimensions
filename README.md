@@ -20,44 +20,10 @@ powerbi-sql-dimension/
 │   ├── Dim_Date.sql              # Script to generate date dimension
 │   └── Dim_Date_Period.sql       # Script for period-based date dimension
 ```
----
-
-
-## Dimensions Included
-### Dim_Date
-- Covers 2000-2050 (easily extendable)
-- Supports **financial year starting in July**
-- Can be marked as the **offical Date Table** in Power BI
-
-
-### Dim_Date_Period
-- Parent of Dim_Date
-- Used for defaults in Power BI
-
-
-### Dim_Geography
-- TBC
-
-### Dim_Weather
-- TBC
 
 ---
-
-
-
-
-- The Date Dimension is marked as the **Date Table**
-- Dimensions connect to the Fact table in a **star schema** layout
-- Simplifies time intelligence (MTD, YTD, FYTD, etc.) and improved report performance.
-- The relationship between the Dim_Date and Dim_Date_Period runs both ways to allow for filtering
-
----
-
-
 
 ## Wiki Pages
 - Data Dictionary: https://github.com/WilliamFData/powerbi-sql-dimensions/wiki/Data-Dictionary
 - DAX Library: https://github.com/WilliamFData/powerbi-sql-dimensions/wiki/DAX-Library
-
-
 
