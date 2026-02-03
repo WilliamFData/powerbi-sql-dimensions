@@ -14,8 +14,8 @@ This project demonstrates:
 powerbi-sql-dimension/
 ├── README.md                     # Project overview and documentation
 ├── Power BI/                     # Power BI report files
-│   └── Portfolio PBI.pbix        # PBIX Format (Latest version)
 │   └── Portfolio PBI.pbip        # This format can be used to track changes between pull requests
+│   └── Portfolio PBI.pbix        # PBIX Format (Latest version)
 ├── SQL/                          # SQL scripts for dimension tables
 │   ├── Dim_Date.sql              # Script to generate date dimension
 │   └── Dim_Date_Period.sql       # Script for period-based date dimension
